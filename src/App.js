@@ -11,6 +11,7 @@ import ContactPage from './Pages/ContactPage.js';
 import ApplyForm from './Components/ApplyForm/ApplyForm.js'
 import './Components/ApplyForm/formStyles.css';
 import Footer from './Components/Footer/Footer.js';
+import Success from './Components/ApplyForm/Success';
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
           <Route path = "/careers" element = {<Careers />}></Route>
           <Route path = "/contactUs" element = {<ContactPage />}></Route>
           <Route path = "/apply" element = {<ApplyForm />}></Route>
-
+          <Route path = "/success" element = {<Success />}></Route>
         </Routes>
         <Footer/>
       </BrowserRouter>

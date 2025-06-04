@@ -65,7 +65,7 @@ const HomePage = () => {
           transition={{ duration: 0.7 }}
         >
           <Button
-            onClick={() => window.location.href = "#apply"}
+            onClick={() => window.location.href = "/apply"}
             className="bg-[#4A2C2A] hover:bg-[#3A231C] shadow-2xl px-10 py-5 text-xl"
           >
             Apply to be a Driver

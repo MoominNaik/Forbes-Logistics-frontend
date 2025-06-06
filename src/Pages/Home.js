@@ -44,7 +44,7 @@ const HomePage = () => {
               Strength. Speed. Purpose. Join our mission-driven logistics team.
             </p>
             <Button
-              onClick={() => window.location.href = "#operations"}
+              onClick={() => window.location.href = "operations"}
               className="bg-[#4A2C2A] hover:bg-[#3A231C]"
             >
               Learn More

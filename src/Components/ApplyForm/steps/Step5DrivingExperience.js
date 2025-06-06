@@ -62,7 +62,7 @@ const Step5DrivingExperience = ({ data, updateData }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
           <div>
-            <label className="form-label brown">Subject to FMCSRs?</label>
+            <label className="form-label brown">Subject to FMCSRs (Federal Motor Carrier Safety Regulations)?</label>
             <select className="input brown" value={data.currentEmployer?.fmcsr || ''} onChange={(e) => handleChange('current', 'fmcsr', e.target.value)}>
               <option value="">Select</option>
               <option value="Y">Yes</option>
@@ -128,7 +128,7 @@ const Step5DrivingExperience = ({ data, updateData }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
               <div>
-                <label className="form-label brown">Subject to FMCSRs?</label>
+                <label className="form-label brown">Subject to FMCSRs (Federal Motor Carrier Safety Regulations)?</label>
                 <select className="input brown" value={employer.fmcsr || ''} onChange={(e) => handleChange(index, 'fmcsr', e.target.value)}>
                   <option value="">Select</option>
                   <option value="Y">Yes</option>

@@ -52,13 +52,6 @@ const sections = [
       "Routine maintenance and inspections keep our fleet in top condition."
     ],
   },
-  {
-    title: "Strategic Growth & Expansion",
-    icon: <FaChartLine />,
-    content: [
-      "Expanding in key markets while maintaining personalized service."
-    ],
-  },
 ];
 
 const OperationsPage = () => {

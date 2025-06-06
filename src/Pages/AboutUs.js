@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import chaseImage from '../Components/Assets/chaseImage.jpg';
+//import chaseImage from '../Components/Assets/chaseImage.jpg';
 import lukeImage from '../Components/Assets/lukeImage.jpg';
 
 
@@ -69,17 +69,12 @@ const AboutPage = () => {
         <div className="space-y-10">
           <BioCard
             name="Chase"
-            image={chaseImage}
+            image={lukeImage}
             shortBio="Chase has years of hands-on experience and leads with a blue-collar, boots-on-the-ground mindset."
             longBio="Chase has been at the forefront of the flatbed trucking industry, building a reputation for excellence through real-world experience and dedication to drivers. He believes in leadership through action and consistency. Chase plays a crucial role in shaping Forbes Logistix’s operational strategy and culture."
           />
 
-          <BioCard
-            name="Luke"
-            image={lukeImage}
-            shortBio="Luke brings a strong background in trucking and logistics with years of field expertise."
-            longBio="Luke has worked across multiple levels of trucking operations, from dispatch to field logistics. His background includes years of experience managing fleet strategy, ensuring compliance, and improving trucking efficiency from the ground up. His leadership brings a practical, results-driven approach to Forbes Logistix."
-          />
+          
         </div>
       </section>
     </div>

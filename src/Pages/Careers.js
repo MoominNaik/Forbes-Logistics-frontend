@@ -38,7 +38,7 @@ const CareersPage = () => {
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
         
-        <div className="relative z-10 text-center px-4 md:px-12">
+        <div className="relative z-10 text-center px-4 md:px-10">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,9 +52,11 @@ const CareersPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <Button as="a" href="/apply">
-              Apply Now
-            </Button>
+            <div className="mt-16">
+              <Button as="a" href="/apply">
+                Apply Now
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -148,13 +150,15 @@ const CareersPage = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center ">
           <h3 className="text-2xl font-bold mb-4">
             Your road starts here. Join the Forbes Logistix family.
           </h3>
-          <Button as="a" href="/apply">
-            Apply Now
-          </Button>
+          <div className="mt-16">
+            <Button as="a" href="/apply">
+              Apply Now
+            </Button>
+          </div>
         </div>
       </section>
     </div>

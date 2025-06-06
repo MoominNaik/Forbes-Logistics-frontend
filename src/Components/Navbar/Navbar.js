@@ -12,7 +12,7 @@ const Navbar = () => {
         </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex gap-10 text-[17px] font-medium tracking-wide">
+        <nav className="hidden md:flex gap-10 text-[17px] font-medium tracking-wide items-center">
           <a
             href="aboutUs"
             className="text-[#F4EDE5] hover:text-red-400 transition-colors duration-300"
@@ -37,10 +37,18 @@ const Navbar = () => {
           >
             Contact Us
           </a>
+
+          {/* Apply Now Button */}
+          <Link
+            to="/careers"
+            className="ml-6 bg-gradient-to-r from-brown-500 to-red-400 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            Apply Now
+          </Link>
         </nav>
       </div>
     </header>
   );
 };
 
-export default Navbar; 
+export default Navbar;

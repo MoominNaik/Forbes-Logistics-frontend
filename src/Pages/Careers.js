@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import careersVideo from '../Components/Assets/careers.mp4';
 import { Link } from 'react-router-dom';
 
-const Button = ({ children, as, href, ...props }) => {
-  const commonClassName = "bg-gradient-to-r from-[#5C3B36] to-[#4A2C2A] hover:from-[#4A2C2A] hover:to-[#5C3B36] text-white px-12 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-64 border-2 border-[#dbb27e] hover:border-white";
+const Button = ({ children, as, to, ...props }) => {
+  const commonClassName = "bg-black text-white px-12 py-4 text-lg rounded-xl shadow transition duration-300 w-64 border border-white hover:bg-white hover:text-black";
 
-  if (as === "a") {
+  if (as === "link") {
     return (
-      <Link to={href} className={commonClassName} {...props}>
+      <Link to={to} className={commonClassName} {...props}>
         {children}
       </Link>
     );
@@ -21,13 +21,18 @@ const Button = ({ children, as, href, ...props }) => {
   );
 };
 
+const boxVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
+
 const CareersPage = () => {
   return (
-    <div className="bg-[#dbb27e] text-[#4A2C2A] min-h-screen overflow-hidden">
+    <div className="bg-white text-black min-h-screen overflow-hidden">
       {/* Hero Section */}
       <section className="relative w-full h-screen flex items-center justify-center">
         <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           muted
           loop
@@ -36,14 +41,16 @@ const CareersPage = () => {
         >
           <source src={careersVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-        
-        <div className="relative z-10 text-center px-4 md:px-10">
+
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-80 z-10"></div>
+
+        <div className="relative z-20 text-center px-4 md:px-12 text-white font-bold tracking-widest">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-wide text-[white] drop-shadow-xl mb-6"
+            className="text-4xl md:text-5xl mb-6"
           >
             Drive Your Future with Forbes Logistix
           </motion.h1>
@@ -52,8 +59,14 @@ const CareersPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="mt-16">
-              <Button as="a" href="/apply">
+            <div className="mt-10">
+              <Button
+                as="link"
+                to="/apply"
+                className="px-10 py-5 text-xl bg-black rounded-xl hover:bg-white hover:text-black transition duration-300 ease-in-out hover:scale-105"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Apply Now
               </Button>
             </div>
@@ -62,105 +75,91 @@ const CareersPage = () => {
       </section>
 
       {/* Info Section */}
-      <section className="max-w-5xl mx-auto mt-20 mb-52 px-6 md:px-12 space-y-12">
-        <div className="relative">
-          {/* Decorative elements */}
-          <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-[#4A2C2A] opacity-20"></div>
-          <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-[#4A2C2A] opacity-20"></div>
-          <div className="text-lg md:text-xl leading-relaxed text-center w-full bg-gradient-to-r from-[#f5e6d6]/60 to-[#e7c9a9]/60 p-8 border-l-8 border-[#cfa36e] shadow-2xl backdrop-blur-md border border-[#4A2C2A]/10">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="font-medium"
-            >
-              At Forbes Logistix, we know that a great career is built on
-              <span className="text-[#4A2C2A] font-bold"> stability</span>, 
-              <span className="text-[#4A2C2A] font-bold"> respect</span>, and 
-              <span className="text-[#4A2C2A] font-bold"> opportunity</span>—and that's exactly what we
-              deliver. As a driver with us, you're more than just a number;
-              you're part of a team that values your hard work and rewards it
-              with competitive pay, industry-leading home time, and the latest
-              equipment to keep you moving safely and comfortably.
-            </motion.p>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 font-medium"
-            >
-              Whether you're new to the industry or a seasoned pro, Forbes
-              Logistix is built to help you succeed. We also believe in investing
-              in the next generation—especially those looking for a strong career
-              path with real growth potential.
-            </motion.p>
-          </div>
+      <section className="max-w-5xl mx-auto mt-20 mb-12 px-6 md:px-12 space-y-16 text-base md:text-lg leading-relaxed text-black relative">
+        <div className="bg-white p-10 md:p-14 border-l-8 border-black shadow-lg rounded-lg text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8"
+          >
+            At Forbes Logistix, we know that a great career is built on
+            <span className="font-semibold"> stability</span>, 
+            <span className="font-semibold"> respect</span>, and 
+            <span className="font-semibold"> opportunity</span>—and that's exactly what we
+            deliver. As a driver with us, you're more than just a number;
+            you're part of a team that values your hard work and rewards it
+            with competitive pay, industry-leading home time, and the latest
+            equipment to keep you moving safely and comfortably.
+          </motion.p>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Whether you're new to the industry or a seasoned pro, Forbes
+            Logistix is built to help you succeed. We also believe in investing
+            in the next generation—especially those looking for a strong career
+            path with real growth potential.
+          </motion.p>
         </div>
 
         {/* Benefits */}
-        <div className="grid md:grid-cols-2 gap-10 text-[#4A2C2A] mt">
-          <div className="bg-gradient-to-r from-[#3A1F1E] via-[#4A2C2A] to-[#5C3B36] rounded-xl shadow-lg p-5 flex flex-col border border-[#6D4E48] hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-lg font-extrabold text-white tracking-wide mb-2">
-              Maximize Your Earnings
-            </h3>
-            <p className="text-white/90 text-sm leading-relaxed font-medium">
-              Commission-based pay—no caps, no limits. The harder you run, the
-              more you earn.
-            </p>
-          </div>
-          <div className="bg-gradient-to-r from-[#3A1F1E] via-[#4A2C2A] to-[#5C3B36] rounded-xl shadow-lg p-5 flex flex-col border border-[#6D4E48] hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-lg font-extrabold text-white tracking-wide mb-2">
-              Home Time You Can Count On
-            </h3>
-            <p className="text-white/90 text-sm leading-relaxed font-medium">
-              Flexible scheduling and predictable routes mean more time with
-              your family.
-            </p>
-          </div>
-          <div className="bg-gradient-to-r from-[#3A1F1E] via-[#4A2C2A] to-[#5C3B36] rounded-xl shadow-lg p-5 flex flex-col border border-[#6D4E48] hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-lg font-extrabold text-white tracking-wide mb-2">Drive the Best</h3>
-            <p className="text-white/90 text-sm leading-relaxed font-medium">
-              Our fleet is packed with top-of-the-line, tech-equipped trucks
-              for comfort and safety.
-            </p>
-          </div>
-          <div className="bg-gradient-to-r from-[#3A1F1E] via-[#4A2C2A] to-[#5C3B36] rounded-xl shadow-lg p-5 flex flex-col border border-[#6D4E48] hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-lg font-extrabold text-white tracking-wide mb-2">Safety First, Always</h3>
-            <p className="text-white/90 text-sm leading-relaxed font-medium">
-              24/7 support, ongoing training, and the latest safety features on
-              every route.
-            </p>
-          </div>
-          <div className="bg-gradient-to-r from-[#3A1F1E] via-[#4A2C2A] to-[#5C3B36] rounded-xl shadow-lg p-5 flex flex-col border border-[#6D4E48] hover:shadow-xl transition-shadow duration-300 md:col-span-2">
-            <h3 className="text-lg font-extrabold text-white tracking-wide mb-2">
-              A Future Beyond the Wheel
-            </h3>
-            <p className="text-white/90 text-sm leading-relaxed font-medium">
-              From driver to dispatcher or operations—real career growth is
-              built in. We promote from within.
-            </p>
-          </div>
-          <div className="bg-gradient-to-r from-[#3A1F1E] via-[#4A2C2A] to-[#5C3B36] rounded-xl shadow-lg p-5 flex flex-col border border-[#6D4E48] hover:shadow-xl transition-shadow duration-300 md:col-span-2">
-            <h3 className="text-lg font-extrabold text-white tracking-wide mb-2">A Career That Starts Anywhere</h3>
-            <p className="text-white/90 text-sm leading-relaxed font-medium">
-              No matter where you're from, if you've got the drive, we've got
-              the roadmap. Forbes Logistix welcomes all.
-            </p>
-          </div>
-        </div>
-
-        {/* Final CTA */}
-        <div className="text-center ">
-          <h3 className="text-2xl font-bold mb-4">
-            Your road starts here. Join the Forbes Logistix family.
-          </h3>
-          <div className="mt-16">
-            <Button as="a" href="/apply">
-              Apply Now
-            </Button>
-          </div>
+        <div className="grid md:grid-cols-2 gap-10 text-black mt-10">
+          {[
+            {
+              title: "Maximize Your Earnings",
+              desc: "Commission-based pay—no caps, no limits. The harder you run, the more you earn."
+            },
+            {
+              title: "Home Time You Can Count On",
+              desc: "Flexible scheduling and predictable routes mean more time with your family."
+            },
+            {
+              title: "Drive the Best",
+              desc: "Our fleet is packed with top-of-the-line, tech-equipped trucks for comfort and safety."
+            },
+            {
+              title: "Real Growth Potential",
+              desc: "Training and career advancement opportunities to help you get ahead."
+            }
+          ].map(({title, desc}, i) => (
+            <motion.div
+              key={i}
+              className="bg-white rounded-xl shadow-md p-5 flex flex-col border border-black hover:shadow-lg transition-shadow duration-300"
+              variants={boxVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.2 }}
+            >
+              <h3 className="text-lg tracking-wide mb-2">{title}</h3>
+              <p className="text-sm leading-relaxed">{desc}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
+      
+      {/* Apply Section */}
+      <div className="relative z-20 bg-white py-20 flex flex-col items-center text-black font-sans px-4">
+        <h2 className="text-4xl font-bold mb-4 text-center">Ready to Drive With Us?</h2>
+        <p className="text-lg mb-8 max-w-xl text-center text-gray-700">
+          If you're passionate about being part of something bigger — where every mile counts — we’d love to have you on our team.
+        </p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+        >
+          <Button
+            onClick={() => window.location.href = "/apply"}
+            className="bg-black text-white px-10 py-5 text-xl rounded-xl shadow-lgtransition duration-300 ease-in-out hover:scale-105 font-bold"
+          >
+            Apply to be a Driver
+          </Button>
+        </motion.div>
+      </div>
     </div>
   );
 };

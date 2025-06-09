@@ -2,10 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import homeVideo from "../Components/Assets/homeVideo.mp4";
 
-// Reusable Button component
-const Button = ({ children, className = "", ...props }) => (
+// Reusable Styled Button
+const Button = ({ children, className = "", noColorHover = false, ...props }) => (
   <button
-    className={`bg-[#4A2C2A] text-white px-8 py-4 text-lg font-bold rounded-2xl shadow-lg hover:bg-[#603632] transition ${className}`}
+    className={`
+      bg-black 
+      text-white 
+      px-8 py-4 
+      text-lg font-semibold 
+      rounded-2xl 
+      shadow-xl 
+      border border-white/20 
+      transition-all duration-300 ease-in-out
+      ${noColorHover ? "hover:scale-105" : "hover:bg-white hover:text-black hover:scale-105"}
+      ${className}
+    `}
     {...props}
   >
     {children}
@@ -26,12 +37,12 @@ const HomePage = () => {
         <source src={homeVideo} type="video/mp4" />
       </video>
 
-      {/* Semi-transparent dark overlay */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 
-      {/* Main Content */}
+      {/* Hero Section */}
       <div className="relative z-20 min-h-screen text-white font-sans flex items-center justify-center">
-        <div className="text-center">
+        <div className="text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,10 +54,7 @@ const HomePage = () => {
             <p className="text-xl mb-6 text-white/90">
               Strength. Speed. Purpose. Join our mission-driven logistics team.
             </p>
-            <Button
-              onClick={() => window.location.href = "operations"}
-              className="bg-[#4A2C2A] hover:bg-[#3A231C]"
-            >
+            <Button onClick={() => window.location.href = "operations"}>
               Learn More
             </Button>
           </motion.div>
@@ -54,9 +62,9 @@ const HomePage = () => {
       </div>
 
       {/* Apply Section */}
-      <div className="relative z-20 bg-black bg-opacity-80 py-20 flex flex-col items-center text-white font-sans">
-        <h2 className="text-4xl font-bold mb-4">Ready to Drive With Us?</h2>
-        <p className="text-lg mb-8 text-white/80 max-w-xl text-center">
+      <div className="relative z-20 bg-white py-20 flex flex-col items-center text-black font-sans px-4">
+        <h2 className="text-4xl font-bold mb-4 text-center">Ready to Drive With Us?</h2>
+        <p className="text-lg mb-8 max-w-xl text-center text-gray-700">
           If you're passionate about being part of something bigger — where every mile counts — we’d love to have you on our team.
         </p>
         <motion.div
@@ -66,7 +74,8 @@ const HomePage = () => {
         >
           <Button
             onClick={() => window.location.href = "/apply"}
-            className="bg-[#4A2C2A] hover:bg-[#3A231C] shadow-2xl px-10 py-5 text-xl"
+            className="bg-black text-white px-10 py-5 text-xl rounded-xl shadow-lgtransition duration-300 ease-in-out hover:scale-105 font-bold"
+            noColorHover
           >
             Apply to be a Driver
           </Button>

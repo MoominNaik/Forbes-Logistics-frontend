@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Step1PersonalInfo from './steps/Step1PersonalInfo';
 import Step2AddressHistory from './steps/Step2AddressHistory';
 import Step3DOTMedical from './steps/Step3DOTMedical';
-import Step4EmploymentHistory from './steps/Step4EmploymentHistory';
+//import Step4EmploymentHistory from './steps/Step4EmploymentHistory';
 import Step5DrivingExperience from './steps/Step5DrivingExperience';
 import Step6AccidentRecord from './steps/Step6AccidentRecord';
 import Step7TrafficConvictions from './steps/Step7TrafficConvictions';
@@ -17,7 +17,7 @@ const steps = [
   Step1PersonalInfo,
   Step2AddressHistory,
   Step3DOTMedical,
-  Step4EmploymentHistory,
+  //Step4EmploymentHistory,
   Step5DrivingExperience,
   Step6AccidentRecord,
   Step7TrafficConvictions,
@@ -124,7 +124,7 @@ const ApplyForm = () => {
           {currentStep < steps.length - 1 ? (
             <button
               onClick={next}
-              className="ml-auto px-6 py-2.5 bg-[#4A2C2A] text-white rounded-xl hover:bg-[#603632] transition"
+              className="ml-auto px-6 py-2.5 bg-[#222] text-white rounded-xl hover:bg-[#333] transition"
             >
               Next →
             </button>

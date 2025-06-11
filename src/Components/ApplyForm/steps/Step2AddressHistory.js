@@ -24,7 +24,7 @@ const Step2AddressHistory = ({ data, updateData }) => {
   return (
     <div className="form-section">
       <h3 className="form-section-title text-2xl font-bold mb-6">Step 2: Address History</h3>
-
+      <p className="text-sm text-gray-600 mb-4">Please provide your current and previous addresses for atleast the past 3 years.</p>
       {/* Current Address */}
       <div className="mb-8">
         <h4 className="text-md font-semibold text-brown-800 mb-4">Current Address</h4>

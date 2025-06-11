@@ -60,15 +60,15 @@ const CareersPage = () => {
             transition={{ duration: 1 }}
           >
             <div className="mt-10">
-              <Button
-                as="link"
-                to="/apply"
-                className="px-10 py-5 text-xl bg-black rounded-xl hover:bg-white hover:text-black transition duration-300 ease-in-out hover:scale-105"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Apply Now
-              </Button>
+              <Link to="/apply">
+                <Button
+                  className="px-12 py-6 text-2xl md:text-3xl bg-black rounded-xl hover:bg-white hover:text-black transition duration-300 ease-in-out hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Apply Now
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

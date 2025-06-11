@@ -31,7 +31,7 @@ const Step7TrafficConvictions = ({ data, updateData }) => {
   return (
     <div className="form-section brown">
       <h3 className="form-section-title text-xl font-bold mb-6">
-        Step 7: Traffic Convictions and Forfeitures (Last 3 Years, excluding parking)
+        Step 6: Traffic Convictions and Forfeitures (Last 3 Years, excluding parking)
       </h3>
 
       {data.trafficConvictions.map((conviction, index) => (

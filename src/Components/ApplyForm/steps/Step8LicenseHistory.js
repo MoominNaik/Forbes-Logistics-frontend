@@ -31,7 +31,7 @@ const Step8LicenseHistory = ({ data, updateData }) => {
   return (
     <div className="form-section brown p-8 rounded-3xl shadow-xl animate-fade-in duration-700">
       <h3 className="form-section-title text-2xl font-bold mb-6">
-        Step 8: Driver's License History (Last 3 Years)
+        Step 7: Driver's License History (Last 3 Years)
       </h3>
 
       {data.licenseHistory.map((license, index) => (

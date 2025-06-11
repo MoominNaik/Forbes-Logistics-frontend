@@ -27,7 +27,7 @@ const Step6AccidentRecord = ({ data, updateData }) => {
 
   return (
     <div className="form-section brown p-8 rounded-3xl shadow-xl animate-fade-in duration-700">
-      <h3 className="form-section-title text-2xl font-bold mb-6">Step 6: Accident Record (Last 3 Years)</h3>
+      <h3 className="form-section-title text-2xl font-bold mb-6">Step 5: Accident Record (Last 3 Years)</h3>
       
       {data.accidentRecords.map((accident, index) => (
         <div key={index} className="bg-white p-6 rounded-xl shadow-md border border-amber-200 mb-6">

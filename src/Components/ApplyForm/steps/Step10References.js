@@ -35,7 +35,7 @@ const Step10References = ({ data, updateData }) => {
 
   return (
     <div className="form-section brown p-8 rounded-3xl shadow-xl animate-fade-in duration-700">
-      <h3 className="form-section-title text-2xl font-bold mb-2">Step 10: References</h3>
+      <h3 className="form-section-title text-2xl font-bold mb-2">Step 9: References</h3>
       <p className="text-gray-700 mb-6">
         Please list 3 people who have knowledge of your safety habits or work ethic (no family members).
       </p>

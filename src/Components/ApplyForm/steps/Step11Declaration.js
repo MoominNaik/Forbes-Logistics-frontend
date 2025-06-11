@@ -13,7 +13,7 @@ const Step11Declaration = ({ data, updateData }) => {
 
   return (
     <div className="form-section">
-      <h3 className="form-section-title text-2xl font-bold mb-6">Step 11: Final Declaration</h3>
+      <h3 className="form-section-title text-2xl font-bold mb-6">Step 10: Final Declaration</h3>
 
       <div className="bg-[#e5e2e0] p-4 rounded">
         <p className="text-sm leading-relaxed">

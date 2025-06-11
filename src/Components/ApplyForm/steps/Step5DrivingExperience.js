@@ -23,7 +23,7 @@ const Step5DrivingExperience = ({ data, updateData }) => {
 
   return (
     <div className="form-section brown space-y-10">
-      <h3 className="form-section-title text-2xl font-bold mb-6">Step 5: Driving Experience (Last 10 Years)</h3>
+      <h3 className="form-section-title text-2xl font-bold mb-6">Step 4: Employment History (Last 10 Years)</h3>
 
       {/* Current Employer */}
       <div className="space-y-6 border rounded-2xl p-6 shadow-md bg-white">
@@ -31,20 +31,21 @@ const Step5DrivingExperience = ({ data, updateData }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
+            <label className="form-label brown">Employer Name</label>
+            <input type="text" className="input brown" value={data.currentEmployer?.employer || ''} onChange={(e) => handleChange('current', 'employer', e.target.value)} required />
+          </div>
+          
+          <div>
+            <label className="form-label brown">Position Held</label>
+            <input type="text" className="input brown" value={data.currentEmployer?.position || ''} onChange={(e) => handleChange('current', 'position', e.target.value)} required />
+          </div>
+          <div>
             <label className="form-label brown">From</label>
             <input type="text" className="input brown" value={data.currentEmployer?.from || ''} onChange={(e) => handleChange('current', 'from', e.target.value)} required />
           </div>
           <div>
             <label className="form-label brown">To</label>
             <input type="text" className="input brown" value={data.currentEmployer?.to || ''} onChange={(e) => handleChange('current', 'to', e.target.value)} required />
-          </div>
-          <div>
-            <label className="form-label brown">Employer Name</label>
-            <input type="text" className="input brown" value={data.currentEmployer?.employer || ''} onChange={(e) => handleChange('current', 'employer', e.target.value)} required />
-          </div>
-          <div>
-            <label className="form-label brown">Position Held</label>
-            <input type="text" className="input brown" value={data.currentEmployer?.position || ''} onChange={(e) => handleChange('current', 'position', e.target.value)} required />
           </div>
           <div>
             <label className="form-label brown">Employer Phone</label>
@@ -60,23 +61,34 @@ const Step5DrivingExperience = ({ data, updateData }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
-          <div>
-            <label className="form-label brown">Subject to FMCSRs (Federal Motor Carrier Safety Regulations)?</label>
-            <select className="input brown" value={data.currentEmployer?.fmcsr || ''} onChange={(e) => handleChange('current', 'fmcsr', e.target.value)}>
-              <option value="">Select</option>
-              <option value="Y">Yes</option>
-              <option value="N">No</option>
-            </select>
-          </div>
-          <div>
-            <label className="form-label brown">DOT Drug/Alcohol Testing?</label>
-            <select className="input brown" value={data.currentEmployer?.dotDrugTest || ''} onChange={(e) => handleChange('current', 'dotDrugTest', e.target.value)}>
-              <option value="">Select</option>
-              <option value="Y">Yes</option>
-              <option value="N">No</option>
-            </select>
-          </div>
+        {/* FMCSRs Question */}
+        <div className="py-4">
+          <label className="form-label brown">
+            Subject to FMCSRs (Federal Motor Carrier Safety Regulations)?
+          </label>
+          <select
+      className="input brown"
+      value={data.currentEmployer?.fmcsr || ''}
+      onChange={(e) => handleChange('current', 'fmcsr', e.target.value)}
+    >
+      <option value="">Select</option>
+      <option value="Y">Yes</option>
+      <option value="N">No</option>
+    </select>
+  </div>
+
+        {/* DOT Drug/Alcohol Testing */}
+        <div className="py-4">
+          <label className="form-label brown">DOT Drug/Alcohol Testing?</label>
+          <select
+            className="input brown"
+            value={data.currentEmployer?.dotDrugTest || ''}
+            onChange={(e) => handleChange('current', 'dotDrugTest', e.target.value)}
+          >
+            <option value="">Select</option>
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+          </select>
         </div>
       </div>
 
@@ -96,14 +108,7 @@ const Step5DrivingExperience = ({ data, updateData }) => {
             <h4 className="text-md font-semibold mb-4 text-brown-700">Previous Employer {index + 1}</h4>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="form-label brown">From</label>
-                <input type="text" className="input brown" value={employer.from || ''} onChange={(e) => handleChange(index, 'from', e.target.value)} />
-              </div>
-              <div>
-                <label className="form-label brown">To</label>
-                <input type="text" className="input brown" value={employer.to || ''} onChange={(e) => handleChange(index, 'to', e.target.value)} />
-              </div>
+              
               <div>
                 <label className="form-label brown">Employer Name</label>
                 <input type="text" className="input brown" value={employer.employer || ''} onChange={(e) => handleChange(index, 'employer', e.target.value)} />
@@ -111,6 +116,14 @@ const Step5DrivingExperience = ({ data, updateData }) => {
               <div>
                 <label className="form-label brown">Position Held</label>
                 <input type="text" className="input brown" value={employer.position || ''} onChange={(e) => handleChange(index, 'position', e.target.value)} />
+              </div>
+              <div>
+                <label className="form-label brown">From</label>
+                <input type="text" className="input brown" value={employer.from || ''} onChange={(e) => handleChange(index, 'from', e.target.value)} />
+              </div>
+              <div>
+                <label className="form-label brown">To</label>
+                <input type="text" className="input brown" value={employer.to || ''} onChange={(e) => handleChange(index, 'to', e.target.value)} />
               </div>
               <div>
                 <label className="form-label brown">Employer Phone</label>
@@ -126,27 +139,38 @@ const Step5DrivingExperience = ({ data, updateData }) => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
-              <div>
-                <label className="form-label brown">Subject to FMCSRs (Federal Motor Carrier Safety Regulations)?</label>
-                <select className="input brown" value={employer.fmcsr || ''} onChange={(e) => handleChange(index, 'fmcsr', e.target.value)}>
-                  <option value="">Select</option>
-                  <option value="Y">Yes</option>
-                  <option value="N">No</option>
-                </select>
-              </div>
-              <div>
-                <label className="form-label brown">DOT Drug/Alcohol Testing?</label>
-                <select className="input brown" value={employer.dotDrugTest || ''} onChange={(e) => handleChange(index, 'dotDrugTest', e.target.value)}>
-                  <option value="">Select</option>
-                  <option value="Y">Yes</option>
-                  <option value="N">No</option>
-                </select>
-              </div>
-            </div>
+             {/* FMCSRs Question */}
+        <div className="py-4">
+          <label className="form-label brown">
+            Subject to FMCSRs (Federal Motor Carrier Safety Regulations)?
+          </label>
+          <select
+      className="input brown"
+      value={data.currentEmployer?.fmcsr || ''}
+      onChange={(e) => handleChange('current', 'fmcsr', e.target.value)}
+    >
+      <option value="">Select</option>
+      <option value="Y">Yes</option>
+      <option value="N">No</option>
+    </select>
+  </div>
+
+        {/* DOT Drug/Alcohol Testing */}
+        <div className="py-4">
+          <label className="form-label brown">DOT Drug/Alcohol Testing?</label>
+          <select
+            className="input brown"
+            value={data.currentEmployer?.dotDrugTest || ''}
+            onChange={(e) => handleChange('current', 'dotDrugTest', e.target.value)}
+          >
+            <option value="">Select</option>
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+          </select>
+        </div>
+      </div>
 
             
-          </div>
         ))}
 
         <button

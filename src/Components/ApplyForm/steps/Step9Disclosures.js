@@ -19,7 +19,7 @@ const Step9Disclosures = ({ data, updateData }) => {
 
   return (
     <div className="form-section brown p-8 rounded-3xl shadow-xl animate-fade-in duration-700">
-      <h3 className="form-section-title text-2xl font-bold mb-6">Step 8: Legal & Health Disclosures</h3>
+      <h3 className="form-section-title text-2xl font-bold mb-6">Step 8: Legal Disclosures</h3>
 
       <div className="space-y-6">
         {disclosureFields.map(({ key, label }) => (

@@ -48,9 +48,7 @@ const ContactPage = () => {
         >
           <h3 className="text-2xl font-semibold mb-3">Operating Hours</h3>
           <p className="text-gray-800">
-            Mon – Fri: 8:00 AM – 6:00 PM <br />
-            Sat: 9:00 AM – 2:00 PM <br />
-            Sun: Closed
+            Open 24 hours a day,<br/> 7 days a week,<br/> 365 days a year.
           </p>
         </motion.div>
       </section>

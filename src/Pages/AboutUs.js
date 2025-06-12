@@ -68,8 +68,9 @@ const AboutPage = () => {
 
       <section className="mb-10 max-w-3xl mx-auto text-xl text-center text-gray-700 italic">
         <p>– let Zack wordsmith</p>
-      </section>
 
+      </section>
+      {/*
       <section className="max-w-4xl mx-auto space-y-10">
         <BioCard
           name="Chase"
@@ -77,7 +78,7 @@ const AboutPage = () => {
           shortBio="Chase has years of hands-on experience and leads with a blue-collar, boots-on-the-ground mindset."
           longBio="Chase has been at the forefront of the flatbed trucking industry, building a reputation for excellence through real-world experience and dedication to drivers. He believes in leadership through action and consistency. Chase plays a crucial role in shaping Forbes Logistix’s operational strategy and culture."
         />
-      </section>
+      </section>*/}
     </div>
   );
 };

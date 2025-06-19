@@ -76,6 +76,7 @@ const CareersPage = () => {
 
       {/* Info Section */}
       <section className="max-w-5xl mx-auto mt-20 mb-12 px-6 md:px-12 space-y-16 text-base md:text-lg leading-relaxed text-black relative">
+        {/*
         <div className="bg-white p-10 md:p-14 border-l-8 border-black shadow-lg rounded-lg text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -104,6 +105,7 @@ const CareersPage = () => {
             path with real growth potential.
           </motion.p>
         </div>
+         */}
 
         {/* Benefits */}
         <div className="grid md:grid-cols-2 gap-10 text-black mt-10">

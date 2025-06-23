@@ -6,7 +6,7 @@ const AboutPage = () => {
   return (
     <div className="text-black">
       {/* Top Section - Fullscreen Heading */}
-      <section className="min-h-screen bg-white flex flex-col justify-center items-center px-6">
+      {/*<section className="min-h-screen bg-white flex flex-col justify-center items-center px-6">
         <motion.h2
           className="text-3xl md:text-5xl font-extrabold text-center tracking-wide max-w-4xl"
           initial={{ opacity: 0, y: -30 }}
@@ -25,7 +25,7 @@ const AboutPage = () => {
         >
           – let Zack wordsmith
         </motion.p>
-      </section>
+      </section>*/}
 
       {/* Bottom Section - Fullscreen About with Truck Background */}
       <section

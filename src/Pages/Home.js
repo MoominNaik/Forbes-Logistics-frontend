@@ -48,11 +48,11 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl font-extrabold leading-tight mb-6">
-              "Run with the buffalo."
+            <h1 className="text-6xl font-extrabold leading-tight mb-6">
+              Run with the buffalo
             </h1>
-            <p className="text-xl mb-6 text-white/90">
-              Strength. Speed. Purpose. Join our mission-driven logistics team.
+            <p className="text-2xl mb-6 text-white/90">
+              Driver Founded, Driver Focused
             </p>
             <Button onClick={() => window.location.href = "operations"}>
               Learn More

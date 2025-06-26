@@ -8,7 +8,7 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import operationsBgImage from "../Components/Assets/operations.jpg";
+import operationsBgImage from "../Components/Assets/operationsBg.jpg";
 
 const sections = [
   {

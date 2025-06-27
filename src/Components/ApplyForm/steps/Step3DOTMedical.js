@@ -11,10 +11,10 @@ const Step3DOTMedical = ({ data, updateData }) => {
     <div className="form-section">
       <h3 className="form-section-title text-2xl font-bold mb-6">Step 3: DOT Medical Examination</h3>
 
-      <div className="form-grid">
-        <div>
+      <div className="form-grid md:grid-cols-1">
+        <div className="md:flex md:flex-col md:items-start md:space-x-0 space-x-4">
           <label className="form-label">Is your DOT Medical Card current?</label>
-          <div className="flex space-x-4 mt-1">
+          <div className="flex flex-col md:flex-row md:space-x-4 mt-1 md:items-start md:space-x-0">
             <label className="flex items-center space-x-2">
               <input
                 type="radio"

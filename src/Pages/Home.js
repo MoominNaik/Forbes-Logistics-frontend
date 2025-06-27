@@ -52,7 +52,7 @@ const HomePage = () => {
               Run with the buffalo
             </h1>
             <p className="text-2xl mb-6 text-white/90">
-              Driver Founded, Driver Focused
+              Driver Founded. Driver Focused
             </p>
             <Button onClick={() => window.location.href = "operations"}>
               Learn More
@@ -65,7 +65,6 @@ const HomePage = () => {
       <div className="relative z-20 bg-white py-20 flex flex-col items-center text-black font-sans px-4">
         <h2 className="text-4xl font-bold mb-4 text-center">Ready to Drive With Us?</h2>
         <p className="text-lg mb-8 max-w-xl text-center text-gray-700">
-          If you're passionate about being part of something bigger, where every mile counts, come join the herd.
         </p>
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

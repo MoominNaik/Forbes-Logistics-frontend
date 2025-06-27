@@ -21,10 +21,10 @@ const ContactSection = () => {
           className="bg-white/20 border border-white/20 backdrop-blur-sm text-white rounded-2xl shadow-xl p-10 hover:shadow-2xl transition duration-300"
         >
           <h3 className="text-2xl font-semibold mb-4">Head Office</h3>
-          <p className="text-white/90 mb-1">123 Logistics Avenue</p>
-          <p className="text-white/90 mb-1">Freight City, TX 75000</p>
+          <p className="text-white/90 mb-1">3180, Utica Ave</p>
+          <p className="text-white/90 mb-1">Jackson, MS 39209</p>
           <p className="text-white/90 mb-1">Email: contact@forbeslogistix.com</p>
-          <p className="text-white/90">Phone: (123) 456-7890</p>
+          <p className="text-white/90">Phone:(601) 300-5529</p>
         </motion.div>
 
         <motion.div
@@ -35,9 +35,9 @@ const ContactSection = () => {
         >
           <h3 className="text-2xl font-semibold mb-4">Operating Hours</h3>
           <p className="text-white/90 leading-relaxed">
-            Open 24 hours a day,<br />
-            7 days a week,<br />
-            365 days a year.
+            Open Mon - Fri,<br />
+            9:00 AM - 5:00 PM,<br />
+            
           </p>
         </motion.div>
       </div>

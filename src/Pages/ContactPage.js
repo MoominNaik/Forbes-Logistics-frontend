@@ -24,7 +24,7 @@ const ContactSection = () => {
           <p className="text-white/90 mb-1">3180, Utica Ave</p>
           <p className="text-white/90 mb-1">Jackson, MS 39209</p>
           <p className="text-white/90 mb-1">Email: contact@forbeslogistix.com</p>
-          <p className="text-white/90">Phone:(601) 300-5529</p>
+          <p className="text-white/90">Phone: (601) 300-5529</p>
         </motion.div>
 
         <motion.div

@@ -35,8 +35,8 @@ const ContactSection = () => {
         >
           <h3 className="text-2xl font-semibold mb-4">Operating Hours</h3>
           <p className="text-white/90 leading-relaxed">
-            Open Mon - Fri,<br />
-            9:00 AM - 5:00 PM,<br />
+            Open Mon - Fri<br />
+            9:00 AM - 5:00 PM<br />
             
           </p>
         </motion.div>

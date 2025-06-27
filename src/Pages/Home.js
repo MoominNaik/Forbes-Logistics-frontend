@@ -52,7 +52,7 @@ const HomePage = () => {
               Run with the buffalo
             </h1>
             <p className="text-2xl mb-6 text-white/90">
-              Driver Founded. Driver Focused
+              Driver Founded. Driver Focused.
             </p>
             <Button onClick={() => window.location.href = "operations"}>
               Learn More
